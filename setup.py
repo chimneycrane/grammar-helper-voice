@@ -5,6 +5,7 @@ setup(
     version='0.1.0',  # Update with your version number
     packages=find_packages(),  # Automatically discover packages
     install_requires=[
+        'pyper'
         'numpy',
         'pandas',
         'scipy',

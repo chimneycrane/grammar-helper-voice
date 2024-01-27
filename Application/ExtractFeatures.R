@@ -128,10 +128,9 @@ specan3 <- function(X, bp = c(0,22), wl = 2048, threshold = 5, parallel = 1){
   return(x)
 }
 
-setwd("/home/prathamsolanki/github/gender-recognition-by-voice/Data/")
-
-data = data.frame("brian.wav", 0, 0, 20)
-names(data) <- c('sound.files', 'selec', 'start', 'end')
-
-acoustics <- specan3(data, parallel=1)
-write.csv(acoustics, file = "Brian-Acoustics.csv")
+Extract <- function(audio_path){
+	data = data.frame(audio_path, 0, 0, 20)
+	names(data) <- c('sound.files', 'selec', 'start', 'end')
+	acoustics <- specan3(data, parallel=1)
+	write.csv(acoustics, file = "Features.csv")
+}
