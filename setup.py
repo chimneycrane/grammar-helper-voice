@@ -14,7 +14,7 @@ setup(
     ],  # List dependencies for automatic installation
     entry_points={
         'console_scripts': [
-            'GrammarHelper=GrammarHelper.Predict:predict',
+            'GrammarHelper=Application.Predict:predict',
             # Replace with your script name, main module, and function
         ],
     },  # Enables running scripts directly (if applicable)
