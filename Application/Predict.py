@@ -2,12 +2,11 @@ import os
 import subprocess
 import pandas as pd
 import xgboost as xgb
-from pyper import R
+import rpy2.robjects as robjects
 
 def predict(audio_path):
-    r = R()
-    r.source(os.getcwd()+"/ExtractFeatures.R")
-    r(f"Extract({audio_path}")
+    robjects.r(os.getcwd()+"/ExtractFeatures.R")
+    robjects.r(f"Extract({audio_path}")
     
     features_to_use = ["meanfreq","sd","median","Q25","Q75","IQR","skew","kurt","sp.ent","sfm","mode","centroid","meanfun","minfun","maxfun","meandom","mindom","maxdom","dfrange","modindx"]
 
