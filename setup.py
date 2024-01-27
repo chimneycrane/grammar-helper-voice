@@ -5,7 +5,7 @@ setup(
     version='0.1.0',  # Update with your version number
     packages=find_packages(),  # Automatically discover packages
     install_requires=[
-        'rpy2==3.5.15'
+        'rpy2==3.5.15',
         'numpy==1.22.0',
         'pandas',
         'scipy',
