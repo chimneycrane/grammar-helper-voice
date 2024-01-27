@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='Grammar-Helper',  # Replace with your desired package name
+    name='GrammarHelper',  # Replace with your desired package name
     version='0.1.0',  # Update with your version number
     packages=find_packages(),  # Automatically discover packages
     install_requires=[
